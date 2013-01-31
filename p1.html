@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>SPEED Touch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/mobiscroll-2.3.1.custom.min.css">		
+		<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">		
+  		<link rel="stylesheet" href="chosen/chosen.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/pad768.css" media="screen and (max-width: 900px)">	
+		<link rel="apple-touch-icon-precomposed" href="images/114x114h.png"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript" src="js/mobiscroll-2.3.1.custom.min.js"></script>	
+  		<script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/oliver.js"></script>	 
+	</head>
+	<body>	
+		<div class="wrapper p1">
+			<div id="right_block" class="p1">
+		 <!-- 右上方固定標頭 -->
+ 		 	<div id="fixed_bar">
+		 		<div class="right_banner p1">
+		 			<div class="h100"></div><span>代理人清單</span>
+		 			<div class="bar_left">
+		 				<a href="javascript:history.back()">返回</a>
+		 			</div>
+		 		</div>
+		 		<div class="right_ctr">
+		 			<div class="fil_now">
+		 				<div class="h100"></div>
+		 			</div>
+		 			<div class="right_space">
+		 				<!--<div class="list_top_fil_ot dropdown">
+			 			  <a class="list_top_edit dropdown-toggle" data-toggle="dropdown" href="#">
+			 			  	<span></span>
+			 			  </a>
+			 			</div>-->
+		 			</div>
+		 		</div>
+	 			<div class="right_slic_bar s2"></div>
+	 		</div>	
+		 <!-- 右上方固定標頭結束 -->
+				<div class="left_line p1"></div>
+		 		<div class="right_wrapper p1">
+		 		</div>
+					<div class="cut_gradient p1"></div>
+					
+					<!-- 新增代理人inline -->
+					
+					<div class="main_add_list_wrapper">
+					
+        <em class="edit_table_title">新增代理人</em>
+												<table class="edit_table">
+													<tr>
+														<td width="80"><p>代理人<span class="justify_fix"></span></p></td>
+														<td colspan="2" class="input_r">
+															
+      <div>
+        <em></em>
+        <select data-placeholder="選擇代理人" style="" class="chzn-select" tabindex="7">
+          <option>林方宴</option>
+          <option>劉信邦</option>
+          <option>陳誠凱</option>
+        </select>
+      </div>
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>代理角色<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+														
+														
+      <div>
+        <em></em>
+        <select data-placeholder="選擇代理人身分" style="" multiple class="chzn-select" tabindex="8">
+          <option>管理部 管理主任</option>
+          <option>會計部 會計師</option>
+          <option>企劃部 專員</option>
+          <option>行銷部 專員</option>
+          <option>業務部 專員</option>
+        </select>
+      </div>
+														
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>收創日期<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+															<p>
+																<span class="front">自</span>
+																<input id="i" name="i"  />
+							<span class="pad768_span">
+						<a href="#" id="show_i" class="btn rz1">修改</a>
+						<a href="#" id="clear_i" class="btn rz2">清除</a>
+							</span>
+						</p>				
+                    	
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>收創日期<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+															<p>
+																<span class="front">到</span>
+																<input id="s" name="s"  />
+							<span class="pad768_span">
+						<a href="#" id="show_s" class="btn rz1">修改</a>
+						<a href="#" id="clear_s" class="btn rz2">清除</a>
+							</span>
+						</p>									
+                    	
+														</td>
+													</tr>
+												</table>
+						<div class="close_set"></div>
+  <div class="modal-footer">
+    <button class="btn btn-primary">新增</button>
+  </div>
+					</div>
+					<!-- 新增代理人inline結束 -->
+					<!-- 編輯 -->
+						<div class="edit_bar p1">
+							<table id="edit_per_table">
+								<tr>
+									<td width="25%" class="left768">代理人</td>
+									<td width="25%">開始時間</td>
+									<td width="25%">結束時間</td>
+									<td width="25%"><div id="t78_ctl" class="btn">編輯</div></td>
+								</tr>
+							</table>
+						</div>
+					<!-- 編輯結束 -->
+					<div class="main_list_wrapper p1" id="main_list_wrapper_p1">
+						<div class="scrol_tub">	
+							<ul>	
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item1">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item2">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item3">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item4">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item5">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item6">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+						<!-- 一筆代理人 -->
+							<li class="item p1" id="item7">
+								<table class="item_per_table">
+									<tr>
+										<td width="25%">
+											<p class="pt1"><span class="t1">管理部</span><span class="t2">管理師</span></p>
+											<p class="pt2"><span class="t3">林方宴</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<p class="pt3"><span class="t4">2012</span><span class="t5">12/07</span></p>
+											<p class="pt4"><span class="t6">08:00</span></p>
+										</td>
+										<td width="25%">
+											<a href="#myModal" role="button" class="add-on" data-toggle="modal"><div class="t7 edit btn">修改</div></a>
+											<div class="t8 cancel btn btn-danger">刪除</div>
+										</td>
+									</tr>
+								</table>
+							</li>
+						<!-- 一筆代理人結束 -->
+							<ul>	
+						</div>
+					</div>
+		 </div>
+		</div>
+		
+		
+		
+		<!-- -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">修改代理人</h3>
+  </div>
+  <div class="modal-body">
+  	
+												<table class="edit_table">
+													<tr>
+														<td width="80"><p>代理人<span class="justify_fix"></span></p></td>
+														<td colspan="2" class="input_r">
+															
+      <div>
+        <em></em>
+        <select data-placeholder="選擇代理人" style="" class="chzn-select" tabindex="7">
+          <option selected disabled>林方宴</option>
+        </select>
+      </div>
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>代理角色<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+														
+														
+      <div>
+        <em></em>
+        <select data-placeholder="選擇代理人身分" style="" multiple class="chzn-select" tabindex="8">
+          <option selected>管理部 管理主任</option>
+          <option selected>會計部 會計師</option>
+          <option>企劃部 專員</option>
+          <option>行銷部 專員</option>
+        </select>
+      </div>
+														
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>收創日期<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+															<p>
+																<span class="front">自</span>
+																<input id="i2" name="i"  />
+							<span class="pad768_span">
+						<a href="#" id="show_i2" class="btn rz1">修改</a>
+						<a href="#" id="clear_i2" class="btn rz2">清除</a>
+							</span>
+						</p>				
+                    	
+														</td>
+													</tr>
+													<tr>
+														<td width="80"><p>收創日期<span class="justify_fix"></p></td>
+														<td colspan="2" class="input_r">
+															<p>
+																<span class="front">到</span>
+																<input id="s2" name="s"  />
+							<span class="pad768_span">
+						<a href="#" id="show_s2" class="btn rz1">修改</a>
+						<a href="#" id="clear_s2" class="btn rz2">清除</a>
+							</span>
+															</p>
+														</td>
+													</tr>
+												</table>
+												
+												
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+    <button class="btn btn-primary">確定</button>
+  </div>
+</div>
+		<!-- -->										
+														
+														
+		
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>SPEED Touch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/mobiscroll-2.3.1.custom.min.css">		
+		<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">		
+  		<link rel="stylesheet" href="chosen/chosen.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/pad768.css" media="screen and (max-width: 900px)">	
+		<link rel="apple-touch-icon-precomposed" href="images/114x114h.png"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/iscroll-min.js"></script>
+		<script type="text/javascript" src="js/mobiscroll-2.3.1.custom.min.js"></script>	
+  		<script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/oliver.js"></script>	 
+
+	</head>
+	<body class="login">
+<div class="wrapper_back">
+	<div class="h100"></div><!--
+ --><div class="light_cut">
+ 		<div class="spot1"></div>
+ 		<div class="spot2"></div>
+ 	</div>
+ 	<div class="spot_left"><div class="h100"></div><div class="spot3"></div></div>
+ 	<div class="spot_right"><div class="h100"></div><div class="spot4"></div></div>
+</div>
+<div class="wrapper_index">
+	<div class="h100"></div>
+	<div class="login_panel">
+		<div id="logo"><i>SPEED</i> Touch</div>
+			<div class="login_input">
+				<div class="bar line_1">
+        <select data-placeholder="機關" style="" class="chzn-select" tabindex="7">
+          <option>客家委員會</option>
+          <option>資訊中心</option>
+          <option>樹林公所</option>
+        </select><span>機關</span></div>
+				<div class="bar line_1"><input type="text" /><span>帳號</span></div>
+				<div class="bar line_2"><input type="password" /><span>密碼</span></div>
+				<div class="bar line_3"><a href="s2.html"><div class="btn btn-inverse  login_btn">登入</div></a></div>
+				<div class="bar line_3">
+					<a href="#myModal" role="button" class="add-on" data-toggle="modal">
+						<div class="btn  login_btn">憑證登入</div>
+					</a>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+		
+		<!-- 憑證登入滑入燈箱 -->
+<div id="myModal" class="modal hide fade index" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">請輸入憑證IC卡PIN碼</h3>
+  </div>
+  <div class="modal-body">
+  				<div class="modal-body-mask"></div>
+				<div class="bar line_2 mod"><input type="password" /><span class="pin_logo"></span><div class="pin_word">PIN碼</div></div>
+												
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+    <button type="button" id="pin_btn" class="btn btn-primary" data-loading-text="驗證中...">確定</button>
+  </div>
+</div>
+		<!-- 憑證登入滑入燈箱 -->
+		
+	
+	</body>
+</html>
+
+
+
+
